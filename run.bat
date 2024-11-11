@@ -65,12 +65,8 @@ if exist "%FINAL_REPO_DIR%" (
 )
 
 
-
-
-
-
 :: Change to the repository directory
-cd "%FINAL_REPO_DIR%"
+cd "%FINAL_REPO_DIR%\gxyvcc-1.0.0""
 
 :: Create the virtual environment if not already set up
 if not exist "venv" (
@@ -80,10 +76,6 @@ if not exist "venv" (
 
 :: Activate the virtual environment
 call venv\Scripts\activate
-
-:: Install setuptools before installing requirements
-echo Installing setuptools...
-pip install setuptools
 
 :: Install requirements if not already installed
 if not exist "venv\Lib\site-packages\uvicorn" (
